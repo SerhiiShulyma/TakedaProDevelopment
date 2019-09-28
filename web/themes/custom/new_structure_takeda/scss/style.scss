@@ -14,6 +14,7 @@ Description: Bootstrap 4 with Sass
 @import "blocks/first-sidebar";
 @import "blocks/find-resources";
 @import "blocks/content-add";
+@import "blocks/footer";
 
 
 /* GENERAL STYLES
@@ -42,7 +43,7 @@ a {
 }
 
 .site-footer {
-    background: $accent-shade !important;
+    background: #E6E6E6 !important;
 }
 
 .menu--main li a {

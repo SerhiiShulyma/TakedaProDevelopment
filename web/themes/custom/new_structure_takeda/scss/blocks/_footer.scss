@@ -1,0 +1,43 @@
+
+.site-footer__bottom{
+    height: 85px;
+    #block-footer-copywrite{
+        height: 24px;
+        width: 200px;
+        text-align: right;
+        p{
+            color: #4C4948;
+        }
+    }
+
+    #block-footer{
+        height: 20px;
+        width: 200px;
+        text-align: right;
+        ul {
+            display: inline-block;
+            float: none;
+            li{ 
+                width: 90px;
+                display: inline-block;
+                &:first-child{
+                    width: 58px;
+                    margin-right: 5px;
+                }
+                &:nth-child(2){
+                    border-left: 2px solid #4C4948;
+                }
+                a{
+                    color: #4C4948;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    #block-takeda-logo{
+        width: 200px;
+        text-align: center;
+        margin: 0 0 0 auto;
+
+    }
+}
