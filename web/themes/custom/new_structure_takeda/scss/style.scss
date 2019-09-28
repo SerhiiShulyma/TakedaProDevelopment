@@ -44,6 +44,9 @@ a {
 
 .site-footer {
     background: #E6E6E6 !important;
+    @include small-mobile {
+        height: 135px;  
+    }
 }
 
 .menu--main li a {
