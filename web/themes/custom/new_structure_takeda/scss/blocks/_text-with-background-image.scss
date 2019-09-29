@@ -1,14 +1,38 @@
 #block-takeda-background-image{ 
-        height: 700px;
-        background-size: cover !important;
+        @include small-mobile {
+            height: 200px;
+            background-size: cover !important;
+        }
+        @include mobile{
+            height: 506px;
+            background-size: cover !important;
+        }
+        @include desktop{
+            height: 700px;
+            background-size: cover !important;
+        }
     .field--name-body {
         text-align: center;
         font-size: 30px;
         padding-top: 35px;
+        @include small-mobile{
+            font-size: 12px;
+            padding-top: 12px;
+        }
         p{
             color: #4C4948; 
           &:first-child{
               margin-bottom: 52px;
+              @include small-mobile{
+                margin-bottom: 22px;
+              }
+          }
+          &:nth-child(2){
+              img{
+                  @include small-mobile{
+                    height: 25px;
+                  }
+              }
           }
           &:nth-child(3){
               margin: 0 auto;
@@ -18,6 +42,9 @@
           } 
           &:last-child{
             margin-top: 14px;
+            @include small-mobile{
+                margin-bottom: 7px;
+              }
           } 
         }
     }

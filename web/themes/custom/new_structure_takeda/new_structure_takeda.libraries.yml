@@ -5,6 +5,7 @@ global-styling:
     js/bootstrap.min.js: {}
     js/global.js: {}
     js/footer-block.js: {}
+    js/dropdown-landing.js: {}
   css:
     component:
       css/style.css: {}

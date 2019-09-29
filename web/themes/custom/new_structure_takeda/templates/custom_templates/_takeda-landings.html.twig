@@ -1,29 +1,41 @@
     <div class="takeda-sites">
-        <h2 class="block-title">{{ 'Choose a therapeutic area' }}</h2>
+        <h2 class="block-title">{{ 'Choose a therapeutic area'|t }}</h2>
             <div class="container">
-                <div class="landing">
-                    <h3 class="landing-title">{{ 'Oncology' }}</h3>
-                        <div id="mm-hcp" class="site-name"><a href="#" >{{ 'Multiple Myeloma' }}</a></div>
-                        <div id="hl-hcp" class="site-name"><a href="#" >{{ 'Hodkin’s Lymphoma' }}</a></div>
-                        <div id="alumbring" class="site-name"><a href="#" >{{ 'ALK+ NSCLC' }}</a></div>
+            <!--                        Oncology block                  -->
+                <div class="landing col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h3 class="landing-title">{{ 'Oncology'|t }}</h3>
+                    <div class="landing-sites closed">
+                        <div id="mm-hcp" class="site-name"><a href="http://takeda-oncology.takeda.antosh.co/mm/en/hcp-login" >{{ 'Multiple Myeloma'|t }}</a></div>
+                        <div id="hl-hcp" class="site-name"><a href="http://takeda-oncology.takeda.antosh.co/hl/hcp-login" >{{ 'Hodkin’s Lymphoma'|t }}</a></div>
+                        <div id="alunbrig" class="site-name"><a href="{{ url('<front>') }}" >{{ 'ALK+ NSCLC'|t }}</a></div>
+                    </div>
                 </div>
-                <div class="landing">
-                    <h3 class="landing-title">{{ 'Gastroenterology' }}</h3>
-                        <div id="alofisel" class="site-name"><a href="#" >{{ 'Complex Perianal Fistulae' }} </a></div>
-                        <div id="entyvio" class="site-name"><a href="#" >{{ 'Inflammaroty Bowel Disease' }}</a></div>
+                <!--                 Gastroenterology block                  -->
+                <div class="landing col-lg-3 col-md-6 col-sm-6 col-12">
+                        <h3 class="landing-title">{{ 'Gastro- <br/> enterology'|t }}</h3>
+                    <div class="landing-sites closed">
+                        <div id="alofisel" class="site-name"><a href="{{ url('<front>') }}" >{{ 'Complex Perianal Fistulae'|t }} </a></div>
+                        <div id="entyvio" class="site-name"><a href="{{ url('<front>') }}" >{{ 'Inflammaroty Bowel Disease'|t }}</a></div>
+                    </div>
                 </div>
-                <div class="landing">
-                    <h3 class="landing-title">{{ 'Rare diseases' }}</h3>
-                        <div class="site-description">{{ 'Immunology & HAE' }}</div>
-                            <div id="hae" class="site-name"><a href="#" >{{ 'Hereditary angioedema (HAE)' }}</a></div>
-                        <div class="site-description">{{ 'Haematology' }}</div>
-                            <div id="hemo" class="site-name"><a href="#" >{{ 'Hemophilia A' }}</a></div>
-                        <div class="site-description">{{ 'Rare metabolic diseases' }}</div>
-                            <div id="mf" class="site-name"><a href="#" >{{ 'Morbus Fabry' }}</a></div>
+                <!--                   Rare Disease block                    -->
+                <div class="landing col-lg-3 col-md-6 col-sm-6 col-12">
+                        <h3 class="landing-title">{{ 'Rare <br /> diseases'|t }}</h3>
+                    <div class="landing-sites closed">
+                        <div class="site-description">{{ 'Immunology & HAE'|t }}</div>
+                            <div id="hae" class="site-name"><a href="{{ url('<front>') }}" >{{ 'Hereditary angioedema (HAE)'|t }}</a></div>
+                        <div class="site-description">{{ 'Haematology'|t }}</div>
+                            <div id="hemo" class="site-name"><a href="{{ url('<front>') }}" >{{ 'Hemophilia A'|t }}</a></div>
+                        <div class="site-description">{{ 'Rare metabolic diseases'|t }}</div>
+                            <div id="mf" class="site-name"><a href="{{ url('<front>') }}" >{{ 'Morbus Fabry'|t }}</a></div>
+                    </div>
                 </div>
-                <div class="landing">
-                    <h3 class="landing-title">{{ 'General practice' }}</h3>
-                        <div id="reflux" class="site-name"><a href="#" >{{ 'Reflux' }}</a></div>
+                <!--                 General Practice block                  -->
+                <div class="landing col-lg-3 col-md-6 col-sm-6 col-12">
+                        <h3 class="landing-title">{{ 'General <br />practice'|t }}</h3>
+                    <div class="landing-sites closed">
+                        <div id="reflux" class="site-name"><a href="http://reflux.takeda.antosh.co/de/hcp-login" >{{ 'Reflux'|t }}</a></div>
+                    </div>
                 </div>
-            </div>
+            </div>    
     </div> 

@@ -34,7 +34,23 @@ body {
 
 /* COLORS 
 --------------------------------------------------*/
-
+/*
+.section {
+    @include tablet{
+        height: 1000px;
+    }
+}
+.row-offcanvas {
+    @include tablet{
+        height: 1000px;
+    }
+}
+#content{
+    @include tablet{
+        height: 1000px;
+    }
+}
+*/
 a {
     color: $accent-shade;
 }

@@ -1,0 +1,113 @@
+#block-choose-a-therapeutic-area{
+//    height: 485px;
+    background-color: rgba($color: $white, $alpha: 0.8);
+//    top: -400px; 
+    .takeda-sites{
+        padding-top: 1px;
+        .block-title{
+            text-align: center;
+            font-size: 25px;
+            color: #FF0000;
+            margin: 30px 0 30px;
+        }
+        .landing{
+            float: left;
+            padding: 0;
+            margin-right: 0px;
+            margin-bottom: 20px;
+            border-left: 1px solid #B2B2B2;
+            &:first-child{
+                border-left: none;
+            }
+            @include small-mobile{
+                height: auto;
+                border-left: none;
+                border-bottom: 1px solid #B2B2B2;
+            }
+            @include mobile{
+                height: 300px;
+                border-bottom: 1px solid #B2B2B2;
+            }
+            @include desktop{
+                height: auto;
+                border-bottom: none;
+            }
+            &:nth-child(2){
+                border-bottom: 1px solid #B2B2B2;
+                @include desktop{
+                    border-bottom: none;
+                }
+            }
+            &:nth-child(3){
+                border-left: none;
+                @include mobile{
+                    height: 405px;
+                    border-bottom: none;
+                }
+                @include desktop{
+                    height: auto;
+                    border-left: 1px solid #B2B2B2;
+                }
+            }
+            &:last-child{
+                @include mobile{
+                    border-bottom: none;
+                    height: 405px;
+                }
+                @include desktop{
+                    height: auto;
+                }
+            }
+            .landing-title{
+                text-transform: uppercase;
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 30px;
+                height: 75px;
+                @include small-mobile{
+                    font-size: 24px;
+                    margin-bottom: 5px
+                }
+                &:after{
+                    content: url('../images/Sign.png');
+                    margin-left: 20px;
+                }
+            }
+            
+            .landing-sites{
+                .site-name{
+                    text-align: center;
+                    background-color: #FF0000;
+                    width: 208px;
+                    height: 40px;
+                    margin: 0 auto 22px;
+                    a{
+                        color: $white;
+                        line-height: 44px;  
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+                }
+                .site-description{
+                    text-align: center;
+                    font-family: 'PraxisLTSemibold';
+                    font-size: 20px;
+                    width: 200px;
+                    margin: 0 auto 9px;
+                    line-height: 22px;
+                }
+                #mf{
+                    background-color: #E6E6E6;
+                } 
+            }
+        }
+
+    }
+    .open{
+        height: 405px;
+        display: block;
+    }
+    .closed{
+        display: none;
+    }
+}

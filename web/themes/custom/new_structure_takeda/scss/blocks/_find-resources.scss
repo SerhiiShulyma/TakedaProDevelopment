@@ -1,15 +1,21 @@
 #block-find-resources{
     text-align: center;
+    clear: both;
+//    top: -400px;
         .field--name-field-title-info{
             font-family: 'PraxisLTSemibold';
             font-size: 20px;
             text-align: center;
+            @include small-mobile{
+                font-size: 14px;
+            }
         }
         .field--name-field-info-body{
             font-size: 15px;
             text-align: center;
             @include small-mobile{
                 text-align: justify;
+                font-size: 12px;
             }
         }
 }
