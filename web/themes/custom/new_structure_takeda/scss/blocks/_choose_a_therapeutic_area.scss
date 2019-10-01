@@ -1,7 +1,18 @@
 #block-choose-a-therapeutic-area{
-//    height: 485px;
+    height: 520px;
     background-color: rgba($color: $white, $alpha: 0.8);
-//    top: -400px; 
+    @include mobile{
+        top: -170px; 
+        position: relative;
+    }
+    @include tablet{
+        top: -180px; 
+        position: relative;
+    }
+    @include desktop{
+        top: -365px; 
+        position: relative;
+    }
     .takeda-sites{
         padding-top: 1px;
         .block-title{
@@ -16,8 +27,10 @@
             margin-right: 0px;
             margin-bottom: 20px;
             border-left: 1px solid #B2B2B2;
+            height: 405px;
+            margin-left: -1px;
             &:first-child{
-                border-left: none;
+                padding: 0;
             }
             @include small-mobile{
                 height: auto;
@@ -26,27 +39,38 @@
             }
             @include mobile{
                 height: 300px;
+                border-left: none;
+                border-right: 1px solid #B2B2B2;
                 border-bottom: 1px solid #B2B2B2;
             }
             @include desktop{
                 height: auto;
                 border-bottom: none;
+                border-left: 1px solid #B2B2B2;
+                border-right: 1px solid #B2B2B2;
             }
             &:nth-child(2){
                 border-bottom: 1px solid #B2B2B2;
+                @include mobile{
+                    border-right: none;
+                }
                 @include desktop{
                     border-bottom: none;
+                    border-left: 1px solid #B2B2B2;
+                    border-right: 1px solid #B2B2B2;
                 }
             }
             &:nth-child(3){
                 border-left: none;
                 @include mobile{
                     height: 405px;
+                    border-right: 1px solid #B2B2B2;
                     border-bottom: none;
                 }
                 @include desktop{
                     height: auto;
                     border-left: 1px solid #B2B2B2;
+                    border-right: 1px solid #B2B2B2;
                 }
             }
             &:last-child{
@@ -54,8 +78,13 @@
                     border-bottom: none;
                     height: 405px;
                 }
+                @include mobile{
+                    border-right: none;
+                }
                 @include desktop{
                     height: auto;
+                    border-left: 1px solid #B2B2B2;
+                    border-right: 1px solid #B2B2B2;
                 }
             }
             .landing-title{
@@ -68,13 +97,35 @@
                     font-size: 24px;
                     margin-bottom: 5px
                 }
+                &:first-child{
+                    padding-top: 1px;
+                }
                 &:after{
                     content: url('../images/Sign.png');
-                    margin-left: 20px;
+                    margin-left: 10px;
+                    position: absolute;
+                    top: 25px;
                 }
+                &.active-landing{
+                    height: 75px;
+                    &:after{
+                        content: url('../images/Sign_down.png'); 
+                        margin-left: 10px;
+                        position: absolute;
+                        top: 20px;
+                    } 
+                }
+                &#oncology {
+                    padding-top: 22px !important;
+                }
+
             }
             
             .landing-sites{
+                height: 300px;
+                @include small-mobile{
+                    height: auto;
+                } 
                 .site-name{
                     text-align: center;
                     background-color: #FF0000;
@@ -98,7 +149,7 @@
                 }
                 #mf{
                     background-color: #E6E6E6;
-                } 
+                }
             }
         }
 

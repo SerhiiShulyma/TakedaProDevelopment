@@ -1,7 +1,17 @@
 #block-find-resources{
     text-align: center;
     clear: both;
-//    top: -400px;
+    @include small-mobile{ 
+        position: initial;
+    }
+    @include mobile{
+        top: -160px;
+        position: relative;
+    }
+    @include desktop{
+        top: -350px;
+        position: relative;
+    }
         .field--name-field-title-info{
             font-family: 'PraxisLTSemibold';
             font-size: 20px;
