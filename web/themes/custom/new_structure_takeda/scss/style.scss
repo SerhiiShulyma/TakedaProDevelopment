@@ -5,7 +5,8 @@ Description: Bootstrap 4 with Sass
 
 // import files
 @import "import";
-
+// import styles for pages
+@import "pages/front-page";
 // import styles for blocks
 @import "blocks/text-with-background-image";
 @import "blocks/search";
@@ -15,13 +16,90 @@ Description: Bootstrap 4 with Sass
 @import "blocks/content-add";
 @import "blocks/footer";
 @import "blocks/choose_a_therapeutic_area";
-// import styles for pages
-@import "pages/front-page";
+
 
 
 /* GENERAL STYLES
 -------------------------------------------------*/
+$min-value-phone: 575;
+@for $i from 0 through 70{
+    $value: $min-value-phone - (3*$i);
+    @media  only screen and (max-width: #{$value}px){
+        #block-choose-a-therapeutic-area{
+            top: -50px - $i;
+            position: relative;
+        }
+        #block-find-resources {
+            top: -57px - $i;
+            position: relative;
+        }
+    }
+}
 
+$min-value: 768;
+@for $i from 1 to 27 {
+    $value: (2*$i)+$min-value;
+    @if ($value<842) {
+        @media  only screen and (min-width: #{$value}px){
+            #block-choose-a-therapeutic-area{
+                top: -208px + $i;
+                position: relative;
+            } 
+            #block-find-resources {
+                top: -219px + $i;
+                position: relative;
+            }
+        }
+    } 
+}
+$min-value-tablet: 850;
+@for $i from 0 to 150 {
+    $value: (2*$i) + $min-value-tablet;
+    @if ($value<992) {
+            @media  only screen and (min-width: #{$value}px){
+                #block-choose-a-therapeutic-area{
+                    top: -185px + $i;
+                    position: relative;
+                }
+                #block-find-resources {
+                    top: -196px + $i;
+                    position: relative;
+                }
+
+            }
+    }
+}
+@media only screen and (min-width: 992px){
+    #block-choose-a-therapeutic-area{
+        top: -288px;
+        position: relative;
+        .container{
+            max-width: 1140px;
+        }
+    }
+    
+    #block-find-resources {
+        top: -292px;
+        position: relative;
+        &.container{
+            max-width: 1021px;
+        }
+    }
+} 
+$min-value-desktop: 1063;
+@for $i from 0 to 250 {
+    $value: (2*$i) + $min-value-desktop;
+        @media only screen and (min-width: #{$value}px){
+            #block-choose-a-therapeutic-area{
+                top: -288px + $i;
+                position: relative;
+            }
+            #block-find-resources {
+                top: -292px + $i;
+                position: relative;
+            }
+        }
+} 
 
 body {
     background: $white;
