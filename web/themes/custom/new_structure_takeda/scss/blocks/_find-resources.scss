@@ -1,21 +1,24 @@
 #block-find-resources{
     text-align: center;
     clear: both;
+    background-color: rgba($color: $white, $alpha: 0.8);
     @include small-mobile{ 
-        position: initial;
+        top: -57px;
+        position: relative;
+        margin: 0 15px;
     }
     @include mobile{
-        top: -160px;
+        top: -219px;
         position: relative;
     }
-    @include desktop{
-        top: -350px;
-        position: relative;
+    @include tablet{
+        top: -219px;
     }
         .field--name-field-title-info{
             font-family: 'PraxisLTSemibold';
             font-size: 20px;
             text-align: center;
+
             @include small-mobile{
                 font-size: 14px;
             }

@@ -5,8 +5,7 @@ Description: Bootstrap 4 with Sass
 
 // import files
 @import "import";
-// import styles for pages
-@import "pages/front-page";
+
 // import styles for blocks
 @import "blocks/text-with-background-image";
 @import "blocks/search";
@@ -16,10 +15,13 @@ Description: Bootstrap 4 with Sass
 @import "blocks/content-add";
 @import "blocks/footer";
 @import "blocks/choose_a_therapeutic_area";
+// import styles for pages
+@import "pages/front-page";
 
 
 /* GENERAL STYLES
 -------------------------------------------------*/
+
 
 body {
     background: $white;
@@ -34,23 +36,7 @@ body {
 
 /* COLORS 
 --------------------------------------------------*/
-/*
-.section {
-    @include tablet{
-        height: 1000px;
-    }
-}
-.row-offcanvas {
-    @include tablet{
-        height: 1000px;
-    }
-}
-#content{
-    @include tablet{
-        height: 1000px;
-    }
-}
-*/
+
 a {
     color: $accent-shade;
 }

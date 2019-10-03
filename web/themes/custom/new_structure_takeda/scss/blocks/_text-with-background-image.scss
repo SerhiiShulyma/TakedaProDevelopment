@@ -1,6 +1,6 @@
 #block-takeda-background-image{ 
         @include small-mobile {
-            height: 200px;
+            height: 250px;
             background-size: cover !important;
         }
         @include mobile{
@@ -13,10 +13,10 @@
         }
     .field--name-body {
         text-align: center;
-        font-size: 30px;
+        font-size: 31px;
         padding-top: 35px;
         @include small-mobile{
-            font-size: 12px;
+            font-size: 13px;
             padding-top: 12px;
         }
         p{
@@ -24,27 +24,52 @@
           &:first-child{
               margin-bottom: 52px;
               @include small-mobile{
-                margin-bottom: 22px;
+                margin-bottom: 20px;
+              }
+              @include mobile {
+                margin-top: -6px;
+              }
+              @include desktop{
+                margin-top: 3px;
+                font-size: 32px;
               }
           }
           &:nth-child(2){
+            @include small-mobile{
+                margin-bottom: 8px;
+            }
+            @include mobile{
+                margin-top: 62px; 
+                margin-bottom: 14px;     
+            }
+            @include desktop{
+              margin-bottom: 13px;
+            }
               img{
                   @include small-mobile{
-                    height: 25px;
+                    height: 30px;
                   }
+                  @include mobile{
+                    height: 51px;
+                  }
+
               }
           }
           &:nth-child(3){
               margin: 0 auto;
-              width: 320px;
+              width: 305px;
               height: 8px;
               border-bottom: 2px solid #4C4948; 
           } 
           &:last-child{
             margin-top: 14px;
             @include small-mobile{
+                margin-top: 5px;
                 margin-bottom: 7px;
               }
+            @include desktop{
+              font-size: 32px;
+            }
           } 
         }
     }

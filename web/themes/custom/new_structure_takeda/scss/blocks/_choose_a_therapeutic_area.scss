@@ -1,32 +1,45 @@
 #block-choose-a-therapeutic-area{
     height: 520px;
     background-color: rgba($color: $white, $alpha: 0.8);
+    @include small-mobile{
+        top: -120px; 
+        position: relative;
+        height: 420px;
+    }
     @include mobile{
-        top: -170px; 
+        top: -208px; 
         position: relative;
     }
     @include tablet{
-        top: -180px; 
+        top: -208px; 
         position: relative;
     }
     @include desktop{
-        top: -365px; 
+        top: -288px; 
         position: relative;
+        height:178px;
+        background-color:  linear-gradient(to top, #ffffff,rgba($color: $white, $alpha: 0.8));
     }
     .takeda-sites{
         padding-top: 1px;
         .block-title{
             text-align: center;
-            font-size: 25px;
+            font-size: 27px;
             color: #FF0000;
-            margin: 30px 0 30px;
+            margin: 36px 0 54px;
+            @include small-mobile{
+                font-size: 14px; 
+                margin: 4px 0 -4px;
+            }
+            @include desktop{
+                margin: 8px 0 16px;
+            }
         }
         .landing{
             float: left;
             padding: 0;
             margin-right: 0px;
             margin-bottom: 20px;
-            border-left: 1px solid #B2B2B2;
             height: 405px;
             margin-left: -1px;
             &:first-child{
@@ -34,68 +47,85 @@
             }
             @include small-mobile{
                 height: auto;
-                border-left: none;
                 border-bottom: 1px solid #B2B2B2;
             }
             @include mobile{
-                height: 300px;
-                border-left: none;
-                border-right: 1px solid #B2B2B2;
+                height: 315px;
                 border-bottom: 1px solid #B2B2B2;
             }
             @include desktop{
                 height: auto;
                 border-bottom: none;
-                border-left: 1px solid #B2B2B2;
                 border-right: 1px solid #B2B2B2;
+                border-left: 1px solid #b2b2b2;
             }
-            &:nth-child(2){
-                border-bottom: 1px solid #B2B2B2;
+            
+            &:nth-child(2){  
                 @include mobile{
-                    border-right: none;
+                    border-bottom: 1px solid #B2B2B2;
+                    &::before{
+                        content: " ";
+                        height: 295px;
+                        position: absolute;
+                        border-left: 1px solid #b2b2b2; 
+                    }
                 }
                 @include desktop{
                     border-bottom: none;
                     border-left: 1px solid #B2B2B2;
-                    border-right: 1px solid #B2B2B2;
+                    &::before{
+                        content: none;
+                        
+                    }
                 }
+                
             }
             &:nth-child(3){
-                border-left: none;
                 @include mobile{
                     height: 405px;
-                    border-right: 1px solid #B2B2B2;
                     border-bottom: none;
+                }
+                @include mobile {
+                    margin-top: 4px; 
                 }
                 @include desktop{
                     height: auto;
-                    border-left: 1px solid #B2B2B2;
-                    border-right: 1px solid #B2B2B2;
+                    border-left: 1px solid #b2b2b2;
                 }
             }
             &:last-child{
                 @include mobile{
                     border-bottom: none;
-                    height: 405px;
-                }
-                @include mobile{
-                    border-right: none;
+                    margin-top: 4px; 
+                    &::before{
+                        content: " ";
+                        height: 403px;
+                        position: absolute;
+                        border-left: 1px solid #b2b2b2; 
+                    }
                 }
                 @include desktop{
                     height: auto;
-                    border-left: 1px solid #B2B2B2;
-                    border-right: 1px solid #B2B2B2;
+                    border-right: 1px solid #b2b2b2;
+                    &::before{
+                        content: none;
+                        
+                    }
                 }
             }
             .landing-title{
                 text-transform: uppercase;
-                font-size: 30px;
+                font-size: 34px;
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 32px;
                 height: 75px;
+                line-height: 32px;
                 @include small-mobile{
-                    font-size: 24px;
-                    margin-bottom: 5px
+                    font-size: 27px;
+                    margin-bottom: 5px;
+                }
+                @include mobile{
+                    margin-bottom: 23px;
                 }
                 &:first-child{
                     padding-top: 1px;
@@ -104,7 +134,19 @@
                     content: url('../images/Sign.png');
                     margin-left: 10px;
                     position: absolute;
-                    top: 25px;
+                    top: 17px;
+                    @include small-mobile{
+                        right: 45px;
+                    }
+                    @include mobile {
+                        right: 13px;
+                    }
+                    @include tablet{
+                        right: 60px; 
+                    }
+                    @include desktop {
+                        right: 8px;
+                    }
                 }
                 &.active-landing{
                     height: 75px;
@@ -112,29 +154,47 @@
                         content: url('../images/Sign_down.png'); 
                         margin-left: 10px;
                         position: absolute;
-                        top: 20px;
+                        top: 17px;
+                        @include small-mobile{
+                            right: 45px;
+                        }
+                        @include mobile {
+                            right: 13px;
+                        }
+                        @include tablet{
+                            right: 60px; 
+                        }
+                        @include desktop {
+                            right: 8px;
+                        }
                     } 
                 }
                 &#oncology {
-                    padding-top: 22px !important;
+                    padding-top: 16px !important;
                 }
 
             }
             
             .landing-sites{
                 height: 300px;
+                background-color: rgba($color: $white, $alpha: 0.8);
                 @include small-mobile{
                     height: auto;
                 } 
                 .site-name{
                     text-align: center;
                     background-color: #FF0000;
-                    width: 208px;
+                    width: 226px;
                     height: 40px;
-                    margin: 0 auto 22px;
+                    margin: 0 auto 25px;
+                    @include small-mobile{
+                        width: 275px;
+                        height: 43px;
+                    }
+
                     a{
                         color: $white;
-                        line-height: 44px;  
+                        line-height: 39px;  
                         font-weight: 600;
                         text-decoration: none;
                     }
@@ -142,7 +202,7 @@
                 .site-description{
                     text-align: center;
                     font-family: 'PraxisLTSemibold';
-                    font-size: 20px;
+                    font-size: 21px;
                     width: 200px;
                     margin: 0 auto 9px;
                     line-height: 22px;
