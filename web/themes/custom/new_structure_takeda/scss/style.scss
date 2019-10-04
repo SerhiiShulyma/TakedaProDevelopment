@@ -21,7 +21,9 @@ Description: Bootstrap 4 with Sass
 
 /* GENERAL STYLES
 -------------------------------------------------*/
- 
+html{
+    overflow-x: hidden;
+} 
 
 body {
     background: $white;

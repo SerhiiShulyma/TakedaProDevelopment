@@ -9,6 +9,7 @@
     @include mobile{
         top: -208px; 
         position: relative;
+        height: 365px;
     }
     @include tablet{
         top: -208px; 
@@ -17,7 +18,7 @@
     @include desktop{
         top: -288px; 
         position: relative;
-        height:178px;
+        height: 300px;
         background-color:  linear-gradient(to top, #ffffff,rgba($color: $white, $alpha: 0.8));
     }
     .takeda-sites{
@@ -50,8 +51,12 @@
                 border-bottom: 1px solid #B2B2B2;
             }
             @include mobile{
+/*                height: auto;*/
+
+    
                 height: 315px;
                 border-bottom: 1px solid #B2B2B2;
+    
             }
             @include desktop{
                 height: auto;
@@ -82,11 +87,11 @@
             }
             &:nth-child(3){
                 @include mobile{
-                    height: 405px;
+                   // height: auto;
                     border-bottom: none;
-                }
-                @include mobile {
-                    margin-top: 4px; 
+                    
+                    height: 405px;
+                    margin-top: 4px
                 }
                 @include desktop{
                     height: auto;
