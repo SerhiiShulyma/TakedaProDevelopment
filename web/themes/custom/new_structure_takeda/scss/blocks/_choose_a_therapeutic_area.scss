@@ -85,9 +85,13 @@
           border-bottom: 1px solid #B2B2B2;
           &::before {
             content: " ";
-            height: 295px;
+            height: 79px;
             position: absolute;
             border-left: 1px solid #b2b2b2;
+          }
+          &.active::before,
+          &.open::before{
+            height: 295px;
           }
         }
         @include tablet {
@@ -132,9 +136,14 @@
           margin-top: 4px;
           &::before {
             content: " ";
-            height: 403px;
+            height: 79px;
             position: absolute;
             border-left: 1px solid #b2b2b2;
+          }
+
+          &.active::before,
+          &.open::before{
+            height: 403px;
           }
         }
         @include desktop {

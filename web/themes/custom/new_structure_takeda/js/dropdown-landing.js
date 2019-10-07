@@ -7,6 +7,7 @@
                 if($('body').width() < 992){
                   var rel = $(this).attr('rel-data');
                   $('#'+rel).toggleClass('open');
+                  $(this).parents('landing').toggleClass('active');
                 }
 
               //// Adding white area when dropdown menu open
