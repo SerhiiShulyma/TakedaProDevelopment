@@ -71,6 +71,9 @@
                 &.open{
                   height: 315px;
                 }
+                .landing-sites{
+                  height: 216px;
+                }
               }
             }
             &:nth-child(2){  
@@ -157,7 +160,7 @@
                     content: url('../images/Sign.png');
                     margin-left: 10px;
                     position: absolute;
-                    top: 17px;
+                    top: 24px;
                     @include small-mobile{
                         right: 45px;
                     }
@@ -168,7 +171,7 @@
                         right: 60px; 
                     }
                     @include desktop {
-                        right: 8px;
+                        right: 14px;
                     }
                 }
                 &.active-landing{
