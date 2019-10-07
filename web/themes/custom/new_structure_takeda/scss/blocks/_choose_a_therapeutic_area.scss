@@ -113,9 +113,7 @@
 
       &:nth-child(3) {
         @include mobile {
-          // height: auto;
           border-bottom: none;
-
           height: 405px;
           margin-top: 4px
         }
