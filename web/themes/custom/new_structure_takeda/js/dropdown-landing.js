@@ -4,17 +4,17 @@
             $('.landing-title').click(function(){
                 $(this).parent().find('.landing-sites').toggleClass('closed');
                 $(this).toggleClass('active-landing');
-                if($('body').width < 992){
+                if($('body').width() < 992){
                   var rel = $(this).attr('rel-data');
                   $('#'+rel).toggleClass('open');
                 }
 
               //// Adding white area when dropdown menu open
-                /* if( ($('.landing-title').hasClass('active-landing'))){
+                 if( ($('.landing-title').hasClass('active-landing'))){
                      $('#block-choose-a-therapeutic-area').height (300);
                  } else {
                      $('#block-choose-a-therapeutic-area').height(178);
-                 }; */
+                 };
             });    
         }
     };
