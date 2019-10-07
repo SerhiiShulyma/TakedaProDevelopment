@@ -41,8 +41,10 @@
             padding: 0;
             margin-right: 0;
             margin-bottom: 20px;
-            height: 405px;
             margin-left: -1px;
+          &.col-12{
+            height: 405px;
+          }
 
             @include small-mobile{
                 height: auto;
