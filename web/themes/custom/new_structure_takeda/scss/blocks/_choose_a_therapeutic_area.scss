@@ -101,7 +101,9 @@
         @include desktop {
           border-bottom: none;
           border-left: 1px solid #B2B2B2;
-          height: 405px;
+          .landing-sites{
+            height: 313px;
+          }
           &::before {
             content: none;
           }
