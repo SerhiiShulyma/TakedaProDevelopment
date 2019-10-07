@@ -140,8 +140,9 @@
             position: absolute;
             border-left: 1px solid #b2b2b2;
           }
-
-          &.active::before,
+          &.active::before{
+            height: 143px;
+          }
           &.open::before{
             height: 403px;
           }
