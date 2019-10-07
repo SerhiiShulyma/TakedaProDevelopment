@@ -1,5 +1,5 @@
 #block-choose-a-therapeutic-area{
-    height: 520px;
+    height: 178px;
     background-color: rgba($color: $white, $alpha: 0.8);
     @include small-mobile{
         top: -120px; 
@@ -18,11 +18,11 @@
     @include desktop{
         top: -288px; 
         position: relative;
-        height: 300px;
+        height: 178px;
         background-color:  linear-gradient(to top, #ffffff,rgba($color: $white, $alpha: 0.8));
     }
     .takeda-sites{
-        padding-top: 1px;
+        padding-top: 4px;
         .block-title{
             text-align: center;
             font-size: 27px;
@@ -39,24 +39,21 @@
         .landing{
             float: left;
             padding: 0;
-            margin-right: 0px;
+            margin-right: 0;
             margin-bottom: 20px;
             height: 405px;
             margin-left: -1px;
-            &:first-child{
-                padding: 0;
-            }
+
             @include small-mobile{
                 height: auto;
                 border-bottom: 1px solid #B2B2B2;
             }
             @include mobile{
-/*                height: auto;*/
-
-    
                 height: 315px;
                 border-bottom: 1px solid #B2B2B2;
-    
+            }
+            @include tablet{
+                height: auto;
             }
             @include desktop{
                 height: auto;
@@ -64,7 +61,18 @@
                 border-right: 1px solid #B2B2B2;
                 border-left: 1px solid #b2b2b2;
             }
-            
+            &:first-child{
+              padding: 0;
+              @include desktop{
+                border-left: 0;
+              }
+              @include tablet{
+                height: auto;
+                &.open{
+                  height: 315px;
+                }
+              }
+            }
             &:nth-child(2){  
                 @include mobile{
                     border-bottom: 1px solid #B2B2B2;
@@ -75,12 +83,19 @@
                         border-left: 1px solid #b2b2b2; 
                     }
                 }
+                @include tablet{
+                  &.open{
+                    height: 315px;
+                  }
+                  .landing-sites{
+                    height: 216px;
+                  }
+                }
                 @include desktop{
                     border-bottom: none;
                     border-left: 1px solid #B2B2B2;
                     &::before{
                         content: none;
-                        
                     }
                 }
                 
@@ -92,6 +107,9 @@
                     
                     height: 405px;
                     margin-top: 4px
+                }
+                @include tablet{
+                  height: auto;
                 }
                 @include desktop{
                     height: auto;
@@ -111,10 +129,9 @@
                 }
                 @include desktop{
                     height: auto;
-                    border-right: 1px solid #b2b2b2;
+                    border-right: 0;
                     &::before{
                         content: none;
-                        
                     }
                 }
             }
@@ -125,6 +142,7 @@
                 margin-bottom: 32px;
                 height: 75px;
                 line-height: 32px;
+              cursor: pointer;
                 @include small-mobile{
                     font-size: 27px;
                     margin-bottom: 5px;
@@ -133,7 +151,7 @@
                     margin-bottom: 23px;
                 }
                 &:first-child{
-                    padding-top: 1px;
+                    padding-top: 7px;
                 }
                 &:after{
                     content: url('../images/Sign.png');
@@ -159,7 +177,7 @@
                         content: url('../images/Sign_down.png'); 
                         margin-left: 10px;
                         position: absolute;
-                        top: 17px;
+                        top: 24px;
                         @include small-mobile{
                             right: 45px;
                         }
@@ -170,12 +188,12 @@
                             right: 60px; 
                         }
                         @include desktop {
-                            right: 8px;
+                            right: 14px;
                         }
                     } 
                 }
                 &#oncology {
-                    padding-top: 16px !important;
+                    padding-top: 24px !important;
                 }
 
             }
@@ -185,7 +203,10 @@
                 background-color: rgba($color: $white, $alpha: 0.8);
                 @include small-mobile{
                     height: auto;
-                } 
+                }
+                @include tablet{
+                  height: auto;
+                }
                 .site-name{
                     text-align: center;
                     background-color: #FF0000;
