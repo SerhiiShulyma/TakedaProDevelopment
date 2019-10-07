@@ -4,8 +4,10 @@
             $('.landing-title').click(function(){
                 $(this).parent().find('.landing-sites').toggleClass('closed');
                 $(this).toggleClass('active-landing');
-                var rel = $(this).attr('rel-data');
-                $('#'+rel).toggleClass('open');
+                if($('body').width < 992){
+                  var rel = $(this).attr('rel-data');
+                  $('#'+rel).toggleClass('open');
+                }
 
               //// Adding white area when dropdown menu open
                 /* if( ($('.landing-title').hasClass('active-landing'))){
