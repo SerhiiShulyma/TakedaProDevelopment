@@ -226,7 +226,7 @@
 
       .landing-sites {
         height: 300px;
-        background-color: rgba($color: $white, $alpha: 0.8);
+        //background-color: rgba($color: $white, $alpha: 0.8);
         @include small-mobile {
           height: auto;
         }
@@ -255,7 +255,7 @@
 
         .site-description {
           text-align: center;
-          font-family: 'PraxisLTSemibold';
+          font-family: 'PraxisLTSemibold',"Praxis LT Semibold",sans-serif;
           font-size: 21px;
           width: 200px;
           margin: 0 auto 9px;

@@ -10,6 +10,16 @@
 }
 
 @font-face {
+  font-family: "Praxis LT Semibold";
+  src: url("//db.onlinewebfonts.com/t/4fe8e1d416ffb7e0e3f3a8880b2fe663.eot");
+  src: url("//db.onlinewebfonts.com/t/4fe8e1d416ffb7e0e3f3a8880b2fe663.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/4fe8e1d416ffb7e0e3f3a8880b2fe663.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/4fe8e1d416ffb7e0e3f3a8880b2fe663.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/4fe8e1d416ffb7e0e3f3a8880b2fe663.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/4fe8e1d416ffb7e0e3f3a8880b2fe663.svg#Praxis LT Semibold") format("svg");
+}
+
+@font-face {
   font-family: 'PraxisLTBold';
   src: url('../fonts/PraxisLTBold/PraxisLTBold.TTF')
 }
