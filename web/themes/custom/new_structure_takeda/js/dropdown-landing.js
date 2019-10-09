@@ -17,7 +17,7 @@
                      $('#block-choose-a-therapeutic-area').height(178);
                  }
             });
-            $('.disabled').click(function () {
+            $('.disabled a').click(function () {
               return 0;
             });
         }
