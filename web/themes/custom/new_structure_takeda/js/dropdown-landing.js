@@ -20,6 +20,7 @@
             $('.disabled a').click(function () {
               return false;
             });
+            $('.menu--footer li:nth-child(2) a').attr('target','_blank');
         }
     };
 })(jQuery, Drupal);
