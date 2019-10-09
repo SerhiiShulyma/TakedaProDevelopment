@@ -244,6 +244,10 @@
             width: 275px;
             height: 43px;
           }
+          &.disabled{
+            opacity: 0.3;
+            background-color: #5E5E5E;
+          }
 
           a {
             color: $white;

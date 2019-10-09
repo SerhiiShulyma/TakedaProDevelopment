@@ -15,8 +15,11 @@
                      $('#block-choose-a-therapeutic-area').height (300);
                  } else {
                      $('#block-choose-a-therapeutic-area').height(178);
-                 };
-            });    
+                 }
+            });
+            $('.disabled').click(function () {
+              return 0;
+            });
         }
     };
 })(jQuery, Drupal);
