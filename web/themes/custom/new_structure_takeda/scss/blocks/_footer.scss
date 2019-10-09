@@ -1,6 +1,15 @@
-
+#page{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 93px;
+}
+footer.site-footer {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}
 .site-footer__bottom {
-  height: 85px;
+  height: 76px;
 
   .container {
     display: flex;
@@ -9,7 +18,7 @@
     }
 
     .footer-info {
-      height: 85px;
+      height: 76px;
       display: inline-block;
       margin-left: auto;
       @include small-mobile {
