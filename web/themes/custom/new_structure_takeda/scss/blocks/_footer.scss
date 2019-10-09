@@ -1,101 +1,100 @@
 
-.site-footer__bottom{
-    height: 85px;
-    .container{
-        display: flex;
-        @include small-mobile {
-            flex-direction: column;  
-        }
-        .footer-info{
-            height: 85px;
-            display: inline-block;
-            margin-left: auto;
-            @include small-mobile {
-                order: 1; 
-                margin: 0 auto;
-                height: 55px; 
-            }
-            #block-footer-copywrite{
-                height: 24px;
-                width: 200px;
-                text-align: right;
-                @include small-mobile {
-                    text-align: center; 
-                    margin-bottom: 0;
-                    margin-top: 0;
-                }
-                .content{
-                    padding-top: 0;
-                    @include small-mobile {
-                        padding-bottom: 0;
-                    }
-                    p{
-                        color: #4C4948;
-                        @include small-mobile {
-                            padding-bottom: 0;
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
+.site-footer__bottom {
+  height: 85px;
 
-            #block-footer{
-                height: 20px;
-                width: 200px;
-                text-align: right;
-                @include small-mobile {
-                    text-align: center;
-                    margin-top: 0;
-                }
-                ul {
-                    display: inline-block;
-                    float: none;
-                    li{ 
-                        width: 90px;
-                        display: inline-block;
-                        &:first-child{
-                            width: 58px;
-                            margin-right: 5px;
-                            @include small-mobile {
-                                border-right: 1px solid #4C4948;
-                                margin-right: 0;
-                            }
-                        }
-                        &:nth-child(2){
-                            border-left: 1px solid #4C4948;
-                            height: 20px;
-                            @include small-mobile {
-                                border: none;
-                            }
-                        }
-                        a{
-                            color: #4C4948;
-                            padding: 0;
-                        }
-                    }
-                }
-            }
-        }
-        #block-takeda-logo{
-            padding-top: 5px;
-            width: 200px;
-            text-align: center;
-            display: inline-block;
-            float: none;
-            @include small-mobile {
-                order: 0;
-                margin: 0 auto;
-                height: 55px;
-                .content{
-                    height: 55px;
-                    padding: 0; 
-                    .field--name-body{
-                        p{
-                           margin-bottom: 10px; 
-                        }
-                    }
-                }
-            }
-        }
+  .container {
+    display: flex;
+    @include small-mobile {
+      flex-direction: column;
     }
+
+    .footer-info {
+      height: 85px;
+      display: inline-block;
+      margin-left: auto;
+      @include small-mobile {
+        order: 1;
+        margin: 0 auto;
+        height: 55px;
+      }
+
+      #block-footer-copywrite {
+        height: 24px;
+        width: 200px;
+        text-align: right;
+        @include small-mobile {
+          text-align: center;
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+
+        .content {
+          padding-top: 0;
+          @include small-mobile {
+            padding-bottom: 0;
+          }
+
+          p {
+            color: #4C4948;
+            @include small-mobile {
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      #block-footer {
+        height: 20px;
+        text-align: right;
+        @include small-mobile {
+          text-align: center;
+          margin-top: 0;
+        }
+
+        ul {
+          display: inline-block;
+          float: none;
+
+          li {
+            display: inline-block;
+            padding: 0 10px;
+            height: 20px;
+            &:nth-child(2) {
+              border-left: 1px solid #4C4948;
+              border-right: 1px solid #4C4948;
+              height: 20px;
+            }
+            a {
+              color: #4C4948;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    #block-takeda-logo {
+      padding-top: 5px;
+      width: 200px;
+      text-align: center;
+      display: inline-block;
+      float: none;
+      @include small-mobile {
+        order: 0;
+        margin: 0 auto;
+        height: 55px;
+        .content {
+          height: 55px;
+          padding: 0;
+
+          .field--name-body {
+            p {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
