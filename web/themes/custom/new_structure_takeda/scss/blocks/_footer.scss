@@ -7,6 +7,7 @@ footer.site-footer {
   position: absolute;
   width: 100vw;
   bottom: 0;
+  padding: 0;
 }
 .site-footer__bottom {
   height: 76px;
@@ -84,7 +85,6 @@ footer.site-footer {
     }
 
     #block-takeda-logo {
-      padding-top: 5px;
       width: 200px;
       text-align: center;
       display: inline-block;
