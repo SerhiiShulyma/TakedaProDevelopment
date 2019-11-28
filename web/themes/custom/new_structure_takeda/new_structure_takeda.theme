@@ -38,9 +38,48 @@ function new_structure_takeda_theme_suggestions_block_alter(&$suggestions, $vari
   }
 }
 function new_structure_takeda_preprocess_block (&$variables){
+
+// Change url for differnt domain's name  
+  global $base_url;
+  $env = (strpos($base_url, 'antosh') !== false ) ? 'dev'  : ((strpos($base_url, 'anthillagency') !== false) ? 'stage' : ((strpos($base_url, '.ch') !== false) ? 'prod': '')); 
+  $domain_name = [
+      'dev' => [
+        'mmhcp'=>'http://takeda-oncology.takeda.antosh.co/mm/', 
+        'alunbrig'=>'http://takeda-oncology.takeda.antosh.co/ALKNSCLC',
+        'reflux'=>'http://reflux.takeda.antosh.co',
+        'alofisel'=>'http://takeda-gastroenterology.takeda.antosh.co/alofisel',
+        'entyvio'=>'http://takeda-gastroenterology.takeda.antosh.co/entyvio',
+        'takhzyro'=>'http://takeda-rare.takeda.antosh.co/takhzyro',
+      ],
+      'stage' => [
+        'mmhcp'=>'http://takeda-oncology.takeda.anthillagency.com/mm', 
+        'alunbrig'=>'http://takeda-oncology.takeda.anthillagency.com/ALKNSCLC',
+        'reflux'=>'http://reflux.takeda.anthillagency.com',
+        'alofisel'=>'https://takeda-gastroenterology.takeda.anthillagency.com/alofisel',
+        'entyvio'=>'https://takeda-gastroenterology.takeda.anthillagency.com/entyvio',
+        'takhzyro'=>'http://takeda-rare.takeda.anthillagency.com/takhzyro',
+      ],
+      'prod' => [
+        'mmhcp'=>'http://takeda-oncology.ch/mm', 
+        'alunbrig'=>'https://takeda-oncology.ch/ALKNSCLC',
+        'reflux'=>'http://takeda-reflux.ch',
+        'alofisel'=>'https://takeda-gastroenterology.ch/alofisel',
+        'entyvio'=>'https://takeda-gastroenterology.ch/entyvio',
+        'takhzyro'=>'https://takeda-rare-diseases.ch/takhzyro',
+      ],
+  ]; 
   
+  foreach ($domain_name as $environment => $site){
+    if($environment == $env){
+      foreach ($site as $site_name => $site_url){
+        $variables[$site_name]= $site_url;
+      }
+    }
+  }
+
+/// Add background image for first block
   if($variables['elements']['#id']=='takeda_background_image'){
     $url =file_create_url($variables['content']['#block_content']->field_background_image->entity->getFileUri());
     $variables['background_image_url']=$url;
-  }
+  }  
 }
