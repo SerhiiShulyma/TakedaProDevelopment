@@ -37,6 +37,7 @@ deploy_production:
       - id
       - sudo mysqldump -utakedaph_pro -pfjfa9oSU takedaph_pro | gzip > /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz
       - scp /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz takedaph@sl350.web.hostpoint.ch:/tmp/
+      - ssh takedaph@sl350.web.hostpoint.ch 'cd /tmp/ | chmod 777 takedaph_pro_$(date +%Y-%m-%d).sql.gz'
       - ssh takedaph@sl350.web.hostpoint.ch 'zcat /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz | mysql -utakedaph_pro -pfjfa9oSU -htakedaph.mysql.db.internal takedaph_pro'
       - ssh takedaph@sl350.web.hostpoint.ch 'cd /home/takedaph/www/wwwnew/pro && git checkout master && git pull'
       - ssh takedaph@sl350.web.hostpoint.ch 'cd /home/takedaph/www/wwwnew/pro && /home/takedaph/.composer/vendor/bin/drush cr'
