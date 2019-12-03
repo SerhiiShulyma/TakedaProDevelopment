@@ -20,7 +20,7 @@ deploy_staging:
       - id
       - sudo mysqldump -uroot takedaph_pro | gzip > /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz
       - sudo scp /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz deploy@stage.takeda.antosh.co:/tmp/
-      - sudo ssh deploy@stage.takeda.antosh.co 'zcat /tmp/itakedaph_pro_$(date +%Y-%m-%d).sql.gz | sudo mysql -u root takedaph_pro'
+      - sudo ssh deploy@stage.takeda.antosh.co 'zcat /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz | sudo mysql -utakedaph_pro -pfjfa9oSU takedaph_pro'
       - sudo ssh deploy@stage.takeda.antosh.co 'cd /mnt/www/wwwnew/pro && sudo git checkout staging && sudo git pull  origin staging'
       - sudo ssh deploy@stage.takeda.antosh.co 'sudo cat /home/deploy/pro_settings.php > /mnt/www/wwwnew/pro/web/sites/default/settings.php'
       - sudo ssh deploy@stage.takeda.antosh.co 'cd /mnt/www/wwwnew/pro && sudo drush cr'
@@ -35,11 +35,11 @@ deploy_production:
   stage: deploy_production
   script:
       - id
-      - sudo mysqldump -uibd-revamp -p&z2&$9,NQR*48Cp ibd-revamp| gzip > /tmp/ibd-revamp_$(date +%Y-%m-%d).sql.gz
-      - scp /tmp/ibd-revamp_$(date +%Y-%m-%d).sql.gz takedaph@sl350.web.hostpoint.ch:/tmp/
-      - ssh takedaph@sl350.web.hostpoint.ch 'zcat /tmp/ibd-revamp_$(date +%Y-%m-%d).sql.gz | mysql -utakedaph_ibbdrev -p&z2&$9,NQR*48Cp -htakedaph.mysql.db.internal takedaph_ibbdrev'
-      - ssh takedaph@sl350.web.hostpoint.ch 'cd /home/takedaph/www/wwwnew/ibdrev && git checkout master && git pull'
-      - ssh takedaph@sl350.web.hostpoint.ch 'cd /home/takedaph/www/wwwnew/ibdrev && /home/takedaph/.composer/vendor/bin/drush cr'
+      - sudo mysqldump -utakedaph_pro -pfjfa9oSU takedaph_pro | gzip > /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz
+      - scp /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz takedaph@sl350.web.hostpoint.ch:/tmp/
+      - ssh takedaph@sl350.web.hostpoint.ch 'zcat /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz | mysql -utakedaph_pro -pfjfa9oSU -htakedaph.mysql.db.internal takedaph_pro'
+      - ssh takedaph@sl350.web.hostpoint.ch 'cd /home/takedaph/www/wwwnew/pro && git checkout master && git pull'
+      - ssh takedaph@sl350.web.hostpoint.ch 'cd /home/takedaph/www/wwwnew/pro && /home/takedaph/.composer/vendor/bin/drush cr'
   tags:
       - staging
   only:
