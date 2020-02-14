@@ -20,7 +20,7 @@ deploy_staging:
       - id
       - sudo mysqldump -uroot takedaph_pro | gzip > /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz
       - sudo scp /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz deploy@stage.takeda.antosh.co:/tmp/
-      - sudo ssh deploy@stage.takeda.antosh.co 'zcat /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz | sudo mysql -utakedaph_pro -pfjfa9oSU takedaph_pro'
+      - sudo ssh deploy@stage.takeda.antosh.co 'zcat /tmp/takedaph_pro_$(date +%Y-%m-%d).sql.gz | sudo mysql -u takedaph_pro -p'fjfa9oSU' takedaph_pro'
       - sudo ssh deploy@stage.takeda.antosh.co 'cd /mnt/www/wwwnew/pro && sudo git checkout staging && sudo git pull  origin staging'
       - sudo ssh deploy@stage.takeda.antosh.co 'sudo cat /home/deploy/pro_settings.php > /mnt/www/wwwnew/pro/web/sites/default/settings.php'
       - sudo ssh deploy@stage.takeda.antosh.co 'cd /mnt/www/wwwnew/pro && sudo drush cr'
